@@ -8,11 +8,11 @@ export default function App() {
   const [yearly, setYearly] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/stats")
+    fetch("https://south-africa-temperature-etl.onrender.com/api/stats")
       .then(r => r.json()).then(setStats);
-    fetch("http://localhost:8000/api/temperature")
+    fetch("https://south-africa-temperature-etl.onrender.com/api/temperature")
       .then(r => r.json()).then(setMonthly);
-    fetch("http://localhost:8000/api/yearly-trend")
+    fetch("https://south-africa-temperature-etl.onrender.com/api/yearly-trend")
       .then(r => r.json()).then(setYearly);
   }, []);
 
